@@ -16,7 +16,7 @@ console.log("Programador encendido");
 later.date.localTime();
 var i = 0;
 for(i=0;i<configuracion.length;i++){
-const sched = later.parse.text('at ' + configuracion[i].hora);
+let sched = later.parse.text('at ' + configuracion[i].hora);
 later.setInterval(()=> this.emit('ideal',configuracion[i].temperatura),sched);
 }
 }
